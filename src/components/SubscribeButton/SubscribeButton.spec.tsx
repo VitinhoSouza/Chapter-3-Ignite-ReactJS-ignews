@@ -11,7 +11,7 @@ jest.mock('next/router', () => ({
   }),
 }))
 
-describe("SubscribeButton", () => {
+describe("SubscribeButton component", () => {
   it("renders correctly", () => {
     const useSessionMocked = jest.mocked(useSession);
 
