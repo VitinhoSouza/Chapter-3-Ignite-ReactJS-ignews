@@ -22,7 +22,9 @@ describe("SigInButton component", () => {
 
     useSessionMocked.mockReturnValueOnce({
       data: {
-        user: { name: "John Doe", email: "john.doe@example.com" },
+        session:{
+          user: { name: "John Doe", email: "john.doe@example.com" },
+        },
         expires: "fake-expires",
       },
       status: "authenticated",
