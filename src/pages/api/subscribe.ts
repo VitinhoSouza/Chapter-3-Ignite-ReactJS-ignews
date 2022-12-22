@@ -17,7 +17,8 @@ type User = {
 
 export default async (req:NextApiRequest,res:NextApiResponse)=>{
     if(req.method === 'POST'){
-        const session = await getSession({req});
+        const dataSession = await getSession({req});
+        const session:any = dataSession?.session;
 
         const user = await fauna.query<User>(
             q.Get(
